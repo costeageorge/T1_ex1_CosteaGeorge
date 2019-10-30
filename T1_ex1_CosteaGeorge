@@ -1,0 +1,15 @@
+freq=0.5;
+amp=0.75;
+duty=25;
+t1=0:0.002:10;
+t2=0:0.02:10;
+t3=0:0.2:10;
+sq_wav1=amp*square(2*pi*freq.*t1,duty)-0.25;
+sq_wav2=amp*square(2*pi*freq.*t2,duty)-0.25;
+sq_wav3=amp*square(2*pi*freq.*t3,duty)-0.25;
+figure(1);
+plot(t1,sq_wav1)
+figure(2);
+plot(t2,sq_wav2)
+figure(3);
+plot(t3,sq_wav3)
